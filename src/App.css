@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family: "Poppins", sans-serif;
+  
+  }
+
+  :root {
+    --pri-color:midnightblue;
+    --border-color:#dcdde1;
+    --text-color:black;
+}
+
+  .Section1{
+    height: 150px;
+    width: 100vw;
+    background-color: var(--pri-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+  }
+
+  form{
+    margin-bottom: -100px;
+    width: 40vw;
+    background-color: white;
+    height: 100px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    
+  }
+
+  form>p{
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 700;
+    padding:10px 0 10px 20px
+
+  }
+  .form-content{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    padding: 0 5px;
+  }
+  .form-content>input{
+    width: 80%;
+    height: 30px;
+    
+  }
+  .form-content>button{
+    width: 12%;
+    height: 30px;
+    color: white;
+    background-color: var(--pri-color);
+    border: none;
+    border-radius: 3px;
+  }
+
+  .Section2{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Section3{
+    margin-top: 70px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul{
+    list-style: none;
+    margin-top: 100px;
+  }
+
+  .todo-list{
+    border: 1px solid var(--border-color);
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    border-radius: 3px;
+    padding: 0 10px ;
+    font-size: 400;
+    color: black;
+  }
+
+  .todo-list>span{
+    display: flex;
+    column-gap: 20px;
+  }
+  .todo-list>span>button{
+   border: none;
+   background-color: inherit;
+  }
+  
+
+  .fa-solid{
+    color: var(--pri-color);
+  }
+  .fa-square{
+    color:#dcdde1;
+  }
+
+  .Edit-form-content{
+    border: 1px solid var(--border-color);
+    width: 40vw;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    border-radius: 3px;
+    padding: 0 10px ;
+    font-size: 400;
+    column-gap: 20px;
+  }
+
+  .Edit-form-content>p{
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    
+  }
+  .Edit-form-content>input{
+    width: 70%;
+    height: 30px;
+    
+  }
+
+  .Edit-form-content>button{
+    width: 12%;
+    height: 30px;
+    font-weight: bold;
+    color: var(--pri-color);
+    background-color: white;
+    border: 1px solid var(--pri-color);
+    border-radius: 3px;
+  }
+
+  .completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+
+  input{
+
+    padding-left: 10px;
+  }
+  
+  /* For smaller devices */
+
+  @media (max-width: 480px) {
+    form,.todo-list,.Edit-form-content{
+      width: 80vw;
+      
+    }
+    .Edit-form-content>button,.form-content>button{
+      width: 15%;
+    }
+    .Edit-form-content>input{
+      width: 65%;
+      margin-left: 1px;
+      
+    }
+  
+
+  }

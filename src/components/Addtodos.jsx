@@ -1,4 +1,5 @@
 import React from "react";
+import AdditionButton from "../Images/Addition button.svg"
 import { useTodoContext } from "../providers/TodoProvider";
 
 const Addtodos = () => {
@@ -22,16 +23,15 @@ const Addtodos = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <p>New Todo:</p>
       <div className="form-content">
         <input
           type="text"
           value={todoItems}
-          placeholder="Add Task"
+          placeholder="Input task title"
           onChange={inputTextHandler}
        
         />
-        <button type="submit"> Add</button>
+        <button type="submit"> <img src={AdditionButton} alt=""  className="AdditionButton"/> </button>
       </div>
     </form>
   );

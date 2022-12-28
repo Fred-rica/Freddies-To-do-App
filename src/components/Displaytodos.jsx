@@ -1,4 +1,6 @@
 import React from "react";
+import EditIcon from "../Images/Edit-icon.svg"
+import DeleteIcon from "../Images/Delete-icon.svg"
 import { useTodoContext } from "../providers/TodoProvider";
 import Edittodos from "./Edittodos";
 
@@ -11,13 +13,15 @@ const Displaytodos = ()=>{
 
         <ul> {todoList.map((todoList,id) =>(
             <li className="todo-list" key={id}>
-           <span> <button onClick={()=>completeTodo(todoList.id)}><i className={todoList.completed ? "fa-solid fa-square-check" : "fa-solid fa-square" }></i></button>
-           <span className={todoList.completed ? "completed" :""}>{todoList.title}</span> 
-
-            </span>
             <span>
-            <button onClick= {()=>findTodo(todoList.id)} disabled={todoList.completed ? true: false}><i className="fa-solid fa-pencil"></i></button>
-            <button onClick= {()=>removeTodo(todoList.id)}><i className="fa-solid fa-trash-can"></i></button>
+            <button className="todo-list-buttons" onClick={()=>completeTodo(todoList.id)}><i className= {todoList.completed ? "fa-solid fa-square-check fa-3x" : "fa-solid fa-square" }></i></button> 
+           <span className={todoList.completed ? "completed" :"uncompleted"}>{todoList.title}</span> 
+            
+            </span>
+
+            <span>
+            <button className="todo-list-buttons"  onClick= {()=>findTodo(todoList.id)} disabled={todoList.completed ? true: false}><img src={EditIcon} alt="EditIcon"></img></button>
+            <button className="todo-list-buttons" onClick= {()=>removeTodo(todoList.id)}><img  src={DeleteIcon} alt="DeleteIcon"></img></button>
              </span>
             </li>
     ))}

@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 83vh;
+  height: 100vh;
 }
 
 .Section1 {
@@ -32,6 +32,7 @@ body {
   width: 100vw;
   background-color: var(--pri-color);
   padding: 73px 30px 9px 30px;
+  display: none;
 }
 
 .Section1 > h1 {
@@ -204,14 +205,22 @@ ul {
 
 .uncompleted{
   width: 200px;
-  height: 30px;
+  height: 22px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 22px;
   color: var(--pri-color);
-  overflow-x: auto;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: initial; 
+}
+
+.uncompleted:hover{
+  overflow: visible;
+  overflow-wrap:break-word;
 }
 
 .Edit-form-content {
@@ -249,7 +258,7 @@ ul {
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
-  width: 87px;
+  width: 200px;
   height: 22px;
   font-family: 'Inter';
   font-style: normal;
@@ -257,7 +266,14 @@ ul {
   font-size: 18px;
   line-height: 22px;
   color: var(--pri-color);
-  overflow-wrap: break-word;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: initial; 
+}
+.completed:hover{
+  overflow: visible;
+  overflow-wrap:break-word;
 }
 
 input {
@@ -267,6 +283,14 @@ input {
 /* For smaller devices */
 
 @media (max-width: 480px) {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+  }
   .form-content,.todo-list{
     width: 100vw;
     height: 122px;
@@ -274,4 +298,7 @@ input {
     border: 1px solid rgba(104, 80, 255, 0.2);
   }
   
+  .Section1{ 
+    display: block;
+  }
 }

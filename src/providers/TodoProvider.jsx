@@ -61,6 +61,8 @@ const TodoProvider = (props) => {
     setIsEditing(false)
   };
 
+  
+
   return (
     <TodoContext.Provider
       value={{

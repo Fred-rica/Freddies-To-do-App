@@ -1,6 +1,7 @@
 import React from "react";
 import"./App.css"
 import Addtodos from "./components/Addtodos";
+import Searchtodos from "./components/Searchtodos"
 import Addtodosbutton from "./components/Addtodosbutton";
 import Displaytodos from "./components/Displaytodos";
 import TodoProvider from "./providers/TodoProvider";
@@ -20,7 +21,7 @@ function App() {
    
 
    <section>
-   <Addtodos/>
+   <Searchtodos/>
    </section>
 
    <section>

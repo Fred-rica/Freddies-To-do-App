@@ -21,7 +21,7 @@ const Searchtodos = () => {
       </svg>
       </button>
 
-      <input type="text" placeholder="Search" className="search-text"/>
+      <input type="search" placeholder="Search Todo's" className="search-text"/>
 
       <button className="fillter-button">
       <svg
